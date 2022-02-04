@@ -1,0 +1,58 @@
+* {
+    padding: 10px;
+    margin: auto;
+}
+#profile-scroll {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+.profile-pictures {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.profile-pictures:hover {
+    background-color: #777;
+}
+/* #top-players {
+
+} */
+#magnuscarlsen {
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+#hikaru {
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+#danielnaroditsky {
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+#anishgiri {
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+#gothamchess {
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+#firouzja2003 {
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+#chessboard-img {
+    border-radius: 8px;
+    width: 500px;
+    height: 500px;
+}
