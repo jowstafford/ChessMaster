@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess Master</title>
+    <link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
 </head>
 <body>
     <!-- header section starts-->
@@ -54,7 +58,11 @@
                 <h6>placeholder</h6>
             </div>
             <div class="chessboard-img">
-                <img src="./assets/placeholder-images/placeholder-chessboard.jpg" alt="pic">
+                <article>
+                    <div class="my-board" id="myBoard" style="width: 45%"></div>
+                </article>
+             
+                <!-- <img src="./assets/placeholder-images/placeholder-chessboard.jpg" alt="pic"> -->
             </div>
             <div class="start-button">
                 <button type="button">Start</button>
@@ -72,6 +80,10 @@
         </footer>
         <!-- Footer ends -->  
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
+
+        <script src="chess.js"></script>
 
         <script src="assets/js/script.js"></script>
 </body>
