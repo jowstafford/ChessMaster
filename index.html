@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Chess Master</title>
 </head>
+
 <body>
     <!-- header section starts-->
-    <header>
-        <h1>
+    <header class="header">
+        <h1 class="CHESS-MASTER">
             <a href="/">CHESS MASTER</a>
         </h1>
     </header>
     <!-- header section ends-->
-
-    <!-- search bar and submit button section starts-->
-    <section id="search-bar">
-        <input type="text" placeholder="Search" />
-        <button type="button">Submit</button>
-    </section>
+    <section class="no_header_or_footer">
+        <!-- search bar and submit button section starts-->
+        <section id="search-bar">
+            <input type="text" placeholder="Search" />
+            <button type="button">Submit</button>
+        </section>
         <!-- search bar and submit button section ends-->
 
         <!-- Profile pictures section Starts-->
         <section id="profile-scroll">
             <div class="profile-pictures">
                 <div id="top-players">
-                    <img src="./assets/placeholder-images/magnus.jpeg" alt="pic" id="magnuscarlsen" >
+                    <img src="./assets/placeholder-images/magnus.jpeg" alt="pic" id="magnuscarlsen">
                     <img src="./assets/placeholder-images/hikaru.jpeg" alt="pic" id="hikaru">
                     <img src="./assets/placeholder-images/daniel.jpeg" alt="pic" id="danielnaroditsky">
                     <img src="./assets/placeholder-images/anish.jpeg" alt="pic" id="anishgiri">
@@ -41,7 +43,7 @@
         <!-- Profile pop up starts here-->
         <section id="profile-info">
             <div class="info-container">
-                
+
             </div>
         </section>
         <!-- Profile pop up ends-->
@@ -65,15 +67,17 @@
             </div>
         </section>
         <!-- Chessboard section ends -->
+    </section>
+    <!-- Footer starts -->
+    <footer class="footer">
+        <h2> Made by Jonathan Prill, Jordan Stafford, and David Young.</h2>
+        <h3> &copy; 2022 Chess Master All rights reserved</h3>
+    </footer>
+    <!-- Footer ends -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-        <!-- Footer starts -->
-        <footer>
-            <h2> Made by Jonathan Prill, Jordan Stafford, and David Young.</h2>
-            <h3> &copy; 2022 Chess Master All rights reserved</h3>
-        </footer>
-        <!-- Footer ends -->  
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-        <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
