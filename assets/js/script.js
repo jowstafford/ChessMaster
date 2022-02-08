@@ -260,13 +260,19 @@ fetch(requestElo).then(function(response) {
 ///////////////////Chessboard Opening Functions///////////////////
 
 var playScotch = function (APIconfigFiller, newPos) {
+  
 
   var config = {
     orientation: 'black',
     draggable: true,
-    position: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR',
+    position: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR', // 
     onChange: playScotch
   }
+  function hint () {
+    console.log('move pawn to e5');
+  }
+  hint();
+
   board = Chessboard('myBoard', config)
   
   if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR') {
@@ -277,6 +283,7 @@ var playScotch = function (APIconfigFiller, newPos) {
       position: 'rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R',
       onChange: playScotch
     }
+    console.log("move knight to c6");
     Chessboard('myBoard', config)
     
   } else if (Chessboard.objToFen(newPos) == 'r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R') {
@@ -286,6 +293,7 @@ var playScotch = function (APIconfigFiller, newPos) {
       position: 'r1bqkbnr/pppp1ppp/2n5/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R',
       onChange: playScotch
     }
+    console.log("move pawn d4");
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'r1bqkbnr/pppp1ppp/2n5/8/3pP3/5N2/PPP2PPP/RNBQKB1R') {
@@ -295,6 +303,7 @@ var playScotch = function (APIconfigFiller, newPos) {
       position: 'r1bqkbnr/pppp1ppp/2n5/8/3NP3/8/PPP2PPP/RNBQKB1R',
       onChange: playScotch
     }
+    console.log("move bishop to  c5");
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'r1bqk1nr/pppp1ppp/2n5/2b5/3NP3/8/PPP2PPP/RNBQKB1R') {
@@ -306,12 +315,13 @@ var playScotch = function (APIconfigFiller, newPos) {
 
 
 var playQueensGambit = function (APIconfigFiller, newPos) {
-
+  
   var config = {
     draggable: true,
     position: 'start',
     onChange: playQueensGambit
   }
+  console.log("move pawn to d4");
   board = Chessboard('myBoard', config)
   
   if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR') {
@@ -322,6 +332,7 @@ var playQueensGambit = function (APIconfigFiller, newPos) {
       position: 'rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR',
       onChange: playQueensGambit
     }
+    console.log("move pawn to c4");
     Chessboard('myBoard', config)
     
   } else if (Chessboard.objToFen(newPos) == 'rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR') {
@@ -331,6 +342,7 @@ var playQueensGambit = function (APIconfigFiller, newPos) {
       position: 'rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/8/PP2PPPP/RNBQKBNR',
       onChange: playQueensGambit
     }
+    console.log("move knight to c3");
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR') {
@@ -340,6 +352,7 @@ var playQueensGambit = function (APIconfigFiller, newPos) {
       position: 'rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR',
       onChange: playQueensGambit
     }
+    console.log("move knight to f3");
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R') {
@@ -358,6 +371,7 @@ var playCaroKann = function (APIconfigFiller, newPos) {
     position: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR',
     onChange: playCaroKann
   }
+  console.log("move pawn to c6")
   board = Chessboard('myBoard', config)
   
   if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR') {
@@ -368,6 +382,7 @@ var playCaroKann = function (APIconfigFiller, newPos) {
       position: 'rnbqkbnr/pp1ppppp/2p5/8/3PP3/8/PPP2PPP/RNBQKBNR',
       onChange: playCaroKann
     }
+    console.log("move pawn to d5")
     Chessboard('myBoard', config)
     
   } else if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR') {
@@ -377,9 +392,11 @@ var playCaroKann = function (APIconfigFiller, newPos) {
       position: 'rnbqkbnr/pp2pppp/2p5/3P4/3P4/8/PPP2PPP/RNBQKBNR',
       onChange: playCaroKann
     }
+    console.log("move pawn to d5")
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pp2pppp/8/3p4/3P4/8/PPP2PPP/RNBQKBNR') {
+    // here is where the  great work you did it!!model goes//
     alert("GREAT WORK YOU DID IT!")
 
   } 
@@ -393,6 +410,7 @@ var playModern = function (APIconfigFiller, newPos) {
     position: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR',
     onChange: playModern
   }
+  console.log("move pawn to g6")
   board = Chessboard('myBoard', config)
   
   if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pppppp1p/6p1/8/4P3/8/PPPP1PPP/RNBQKBNR') {
@@ -403,6 +421,7 @@ var playModern = function (APIconfigFiller, newPos) {
       position: 'rnbqkbnr/pppppp1p/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR',
       onChange: playModern
     }
+    console.log("move bishop to g7")
     Chessboard('myBoard', config)
     
   } else if (Chessboard.objToFen(newPos) == 'rnbqk1nr/ppppppbp/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR') {
@@ -412,6 +431,7 @@ var playModern = function (APIconfigFiller, newPos) {
       position: 'rnbqk1nr/ppppppbp/6p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR',
       onChange: playModern
     }
+    console.log("move pawn to c5")
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N5/PPP2PPP/R1BQKBNR') {
@@ -430,6 +450,7 @@ var playKingsIndian = function (APIconfigFiller, newPos) {
     position: 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR',
     onChange: playKingsIndian
   }
+  console.log("move knight to f6")
   board = Chessboard('myBoard', config)
   
   if (Chessboard.objToFen(newPos) == 'rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR') {
@@ -440,6 +461,7 @@ var playKingsIndian = function (APIconfigFiller, newPos) {
       position: 'rnbqkb1r/pppppppp/5n2/8/2PP4/8/PP2PPPP/RNBQKBNR',
       onChange: playKingsIndian
     }
+    console.log("move pawn to g6")
     Chessboard('myBoard', config)
     
   } else if (Chessboard.objToFen(newPos) == 'rnbqkb1r/pppppp1p/5np1/8/2PP4/8/PP2PPPP/RNBQKBNR') {
@@ -449,6 +471,7 @@ var playKingsIndian = function (APIconfigFiller, newPos) {
       position: 'rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR',
       onChange: playKingsIndian
     }
+    console.log("move bishop to g7")
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqk2r/ppppppbp/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR') {
@@ -458,6 +481,7 @@ var playKingsIndian = function (APIconfigFiller, newPos) {
       position: 'rnbqk2r/ppppppbp/5np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR',
       onChange: playKingsIndian
     }
+    console.log("move pawn to d6")
     Chessboard('myBoard', config)
 
 
@@ -475,6 +499,7 @@ var playRuyLopez = function (APIconfigFiller, newPos) {
     position: 'start',
     onChange: playRuyLopez
   }
+  console.log("move pawn to e4")
   board = Chessboard('myBoard', config)
   
   if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR') {
@@ -485,6 +510,7 @@ var playRuyLopez = function (APIconfigFiller, newPos) {
       position: 'rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR',
       onChange: playRuyLopez
     }
+    console.log("move knight to f3")
     Chessboard('myBoard', config)
     
   } else if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R') {
@@ -494,6 +520,7 @@ var playRuyLopez = function (APIconfigFiller, newPos) {
       position: 'r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R',
       onChange: playRuyLopez
     }
+    console.log("move bishop to b5")
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R') {
