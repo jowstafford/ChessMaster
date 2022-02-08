@@ -5,28 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Foundation-CSS/Foundation-Sites-CSS/css/foundation.css" />
-    <link rel="stylesheet" href="Foundation-CSS/Foundation-Sites-CSS/css/app.css"/>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Chess Master</title>
-    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
-        integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
 </head>
 
 <body>
     <!-- header section starts-->
     <header class="header">
-        <h1>
-            <a href="/" id="CHESS-MASTER">CHESS MASTER</a>
+        <h1 class="CHESS-MASTER">
+            <a href="/">CHESS MASTER</a>
         </h1>
-        <!-- search bar and submit button section starts-->
-        <section id="search-bar">
-            <input type="text" placeholder="Search" id="search"/>
-            <button type="button" id="search-button">Submit</button>
-        </section>
-        <!-- search bar and submit button section ends-->
     </header>
     <!-- header section ends-->
     <section class="no_header_or_footer">
+        <!-- search bar and submit button section starts-->
+        <section id="search-bar">
+            <input type="text" placeholder="Search" />
+            <button  class="button" type="button">Submit</button>
+        </section>
+        <!-- search bar and submit button section ends-->
 
         <!-- Profile pictures section Starts-->
         <section id="profile-scroll">
@@ -53,44 +54,44 @@
 
         <!-- Chessboard section starts -->
         <section id="chessboard">
-            <div>
-                <h1 id="Opening_1">Opening 1</h1>
+            <div class="opening-title">
+                <h1>Opening 1</h1>
             </div>
-            <div>
-                <h6 id="placeholder">placeholder</h6>
+            <div class="hint-text">
+                <h6>placeholder</h6>
             </div>
             <div class="chessboard-img">
                 <article>
                     <div class="my-board" id="myBoard" style="width: 45%"></div>
                 </article>
-                <div class="start-button">
-                    <button type="button">Start</button>
-                </div>
-                <div class="hint-button">
-                    <button type="button">Hint</button>
-                </div>
+            <div class="button">
+                <button id="hintBtn"type="button">Hint</button>
+            </div>
         </section>
+        <!-- Congrats section-->
+        <div class="winning-message" id="winning-message">
+            <div data-winning-message-text">
+                <h2>GREAT WORK YOU DID IT!</h2>
+            </div>
+            <button class="close-button">&times;</button>
+        </div>
+        <div id="overlay"></div>
+        <!-- congrats section ends-->
         <!-- Chessboard section ends -->
     </section>
     <!-- Footer starts -->
     <footer class="footer">
-        <h2 id="made-by"> Made by Jonathan Prill, Jordan Stafford, and David Young.</h2>
-        <h3 id="rights-reserved"> &copy; 2022 Chess Master All rights reserved</h3>
+        <h2> Made by Jonathan Prill, Jordan Stafford, and David Young.</h2>
+        <h3> &copy; 2022 Chess Master All rights reserved</h3>
     </footer>
     <!-- Footer ends -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
-        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
-        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
 
     <script src="chess.js"></script>
 
     <script src="assets/js/script.js"></script>
-    <script src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/foundation.js"></script>
-    <script src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/jquery.js"></script>
-    <srcipt src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/what-input.js"></srcipt>
 </body>
 
 </html>
