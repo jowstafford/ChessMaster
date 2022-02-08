@@ -31,12 +31,14 @@
     height: auto;
 }
 #search-bar {
-    width: 500%;
+    width: 300%;
 }
 #profile-scroll {
     /* background-color: black; */
     overflow: auto;
     white-space: nowrap;
+    height: auto;
+    width: auto;
 }
 .profile-pictures {
     display: inline-block;
@@ -44,6 +46,8 @@
     text-align: center;
     padding: 14px;
     text-decoration: none;
+    height: auto;
+    width: auto;
 }
 .profile-pictures:hover {
     background-color: #777;
@@ -53,6 +57,8 @@
 } */
 #magnuscarlsen {
     border-radius: 8px;
+    /* width: 50%;
+    height: 50%; */
     width: 200px;
     height: 200px;
 }
