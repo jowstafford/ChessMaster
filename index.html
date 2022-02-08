@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Chess Master</title>
-    <link rel="stylesheet"
-      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
-      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
-      crossorigin="anonymous">
 </head>
-
 <body>
     <!-- header section starts-->
-    <header class="header">
-        <h1 class="CHESS-MASTER">
+    <header>
+        <h1>
             <a href="/">CHESS MASTER</a>
         </h1>
     </header>
     <!-- header section ends-->
-    <section class="no_header_or_footer">
-        <!-- search bar and submit button section starts-->
-        <section id="search-bar">
-            <input type="text" placeholder="Search" />
-            <button type="button">Submit</button>
-        </section>
+
+    <!-- search bar and submit button section starts-->
+    <section id="search-bar">
+        <input type="text" placeholder="Search" />
+        <button type="button">Submit</button>
+    </section>
         <!-- search bar and submit button section ends-->
 
         <!-- Profile pictures section Starts-->
         <section id="profile-scroll">
             <div class="profile-pictures">
-                <div id="top-players">
-                    <img src="./assets/placeholder-images/magnus.jpeg" alt="pic" id="magnuscarlsen">
-                    <img src="./assets/placeholder-images/hikaru.jpeg" alt="pic" id="hikaru">
-                    <img src="./assets/placeholder-images/daniel.jpeg" alt="pic" id="danielnaroditsky">
-                    <img src="./assets/placeholder-images/anish.jpeg" alt="pic" id="anishgiri">
-                    <img src="./assets/placeholder-images/levy.jpeg" alt="pic" id="gothamchess">
-                    <img src="./assets/placeholder-images/ali.png" alt="pic" id="firouzja2003">
+                <div class="row">
+                    <div class="column">
+                        <img src="/assets/placeholder-images/placeholder-profile1-thimbnail.jpg" alt="pic"style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                    </div>
+                    <div class="column">
+                        <img src="/assets/placeholder-images/placeholder-profile2tumbnail.jpg" alt="pic"style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                    </div>
+                    <div class="column">
+                        <img src="/assets/placeholder-images/placeholder-profile3thumbnail.jpg" alt="pic"style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                        <p style="clear: both"></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -47,7 +44,9 @@
         <!-- Profile pop up starts here-->
         <section id="profile-info">
             <div class="info-container">
-
+                <p>this is where the players most used openings title will go.</p> 
+                <br>
+                <p> the opening links, player profile picture, elo container, and player stats.</p>
             </div>
         </section>
         <!-- Profile pop up ends-->
@@ -61,40 +60,22 @@
                 <h6>placeholder</h6>
             </div>
             <div class="chessboard-img">
-                <article>
-                    <div class="my-board" id="myBoard" style="width: 45%"></div>
-                </article>
+                <img src="./assets/placeholder-images/placeholder-chessboard.jpg" alt="pic"
+            </div>
             <div class="start-button">
                 <button type="button">Start</button>
             </div>
             <div class="hint-button">
-                <button id="hintBtn"type="button">Hint</button>
+                <button type="button">Hint</button>
             </div>
         </section>
-        <!-- Congrats section-->
-        <div class="winning-message" id="winning-message">
-            <div data-winning-message-text">
-                <h2>GREAT WORK YOU DID IT!</h2>
-            </div>
-            <button class="close-button">&times;</button>
-        </div>
-        <div id="overlay"></div>
-        <!-- congrats section ends-->
         <!-- Chessboard section ends -->
-    </section>
-    <!-- Footer starts -->
-    <footer class="footer">
-        <h2> Made by Jonathan Prill, Jordan Stafford, and David Young.</h2>
-        <h3> &copy; 2022 Chess Master All rights reserved</h3>
-    </footer>
-    <!-- Footer ends -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
-
-    <script src="chess.js"></script>
-
-    <script src="assets/js/script.js"></script>
+        <!-- Footer starts -->
+        <footer>
+            <h2> Made by Jonathan Prill, Jordan Stafford, and David Young.</h2>
+            <h3> &copy; 2022 Chess Master All rights reserved</h3>
+        </footer>
+        <!-- Footer ends -->  
 </body>
-
 </html>
