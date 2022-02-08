@@ -17,25 +17,21 @@
 #CHESS-MASTER {
     /* border: 5px solid Black; */
     border-radius: 8px;
+    top: 20px;
     /* background-color:#333;
     color:#777; */
     /* text-decoration: underline;
     text-decoration-color: #333; */
 }
-#search-bar {
+#search {
     position: absolute;
-    right: 800px;
-    top: 20px;
+    left: 420px;
+    top: 14px;
     width: auto;
     height: auto;
 }
-#search-button {
-    position:absolute;
-    left:760px;
-    bottom: 0px;
-}
-#search {
-    width: 450%;
+#search-bar {
+    width: 500%;
 }
 #profile-scroll {
     /* background-color: black; */
@@ -50,7 +46,7 @@
     text-decoration: none;
 }
 .profile-pictures:hover {
-    /* background-color: #777; */
+    background-color: #777;
 }
 /* #top-players {
 
