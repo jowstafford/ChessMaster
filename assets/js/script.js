@@ -561,7 +561,7 @@ var playCaroKann = function (APIconfigFiller, newPos) {
 };
 
 var playModern = function (APIconfigFiller, newPos) {
-  let queenGambitHints = ["Pawn D2 to D4", "Pawn C2 to C4", "Knight B1 to C3", "Knight G1 to F3"]
+  let modernHints = ["Pawn D2 to D4", "Pawn C2 to C4", "Knight B1 to C3", "Knight G1 to F3"]
 
   var config = {
     orientation: 'black',
@@ -601,7 +601,7 @@ var playModern = function (APIconfigFiller, newPos) {
 
 
 var playKingsIndian = function (APIconfigFiller, newPos) {
-  let kingsIndianHints = ["Knight B8 to F6", "Pawn G7 to G6", "Bishop F8 to G7", "Pawn D7 to D6"]
+  let kingsIndianHints = ["Knight G8 to F6", "Pawn G7 to G6", "Bishop F8 to G7", "Pawn D7 to D6"]
 
   var config = {
     orientation: 'black',
