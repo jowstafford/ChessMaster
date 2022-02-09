@@ -2,20 +2,49 @@
 
 var topPlayersEl = document.querySelector("#top-players")
 var profileInfoEl = document.querySelector("#profile-info")
+var headTextEl = document.querySelector("#head-text")
+var profilePictureEl = document.querySelector("#profile-picture")
+var playerNameEl = document.querySelector("#player-name")
+var playerRatingEl = document.querySelector("#player-rating")
+var openingTitleEl = document.querySelector("#opening-title")
+var chessboardEL = document.querySelector("#chessboard")
 var userArr = ['firouzja2003', 'hikaru', 'danielnaroditsky', 'magnuscarlsen', 'anishgiri', 'gothamchess']
 var APIUrl = ("https://api.chess.com/pub/player/");
 
 
 
+let userScore = 1
 
 
 
 //When Top Player Picture Clicked - runs displayPlayerInfo function
 $('img').click(function(e) {
-    profileInfoEl.textContent = "";
-    var selectedPlayer = e.target.id
-    displayPlayerInfo(selectedPlayer);
+  profileInfoEl.textContent = "";
+  headTextEl.textContent = "";
+  profilePictureEl.textContent = "";
+  playerNameEl.textContent = "";
+  playerRatingEl.textContent = "";
+  var selectedPlayer = e.target.id
+  displayPlayerInfo(selectedPlayer);
 });
+
+
+////////////////New//////////////////////////////////////
+var searchBarEl = document.querySelector("#search-bar")
+var searchInputEl = document.querySelector("#search-input");
+
+var searchFunction = function(selectedPlayer) {
+  event.preventDefault();
+  profileInfoEl.textContent = "";
+  var selectedPlayer = searchInputEl.value.trim()
+  displayPlayerInfo(selectedPlayer)
+
+}
+
+searchBarEl.addEventListener("submit", searchFunction);
+
+///////////////////////////////////////////////////////////
+
 
 
 
@@ -39,51 +68,66 @@ var displayPlayerInfo = function(selectedPlayer) {
       let openingName = newArr[15]
       
         console.log(openingName)
+        //Displays Header
+        var headText = document.createElement('h2');
+        headText.innerHTML = "Players Most Used Openings";
+        headText.setAttribute("class", "opening-header")
+        profileInfoEl.append(headText);
+
 
         //searches text for opening names and then renders them on screen
         if (openingName.indexOf('Caro') > -1) {
           var btn = document.createElement('button');
           btn.innerHTML = "Caro-Kann";
+          btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playCaroKann)
           profileInfoEl.append(btn);
         } else if (openingName.indexOf("Modern") > -1) {
           var btn = document.createElement("button")
           btn.textContent = "Modern Defense";
+          btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playModern)
           profileInfoEl.append(btn);
         } else if (openingName.indexOf("Scotch") > -1) {
           var btn = document.createElement("button")
           btn.textContent = "Scotch";
+          btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playScotch)
           profileInfoEl.append(btn);
         } else if (openingName.indexOf("Indian") > -1) {
           var btn = document.createElement("button")
           btn.textContent = "Kings Indian";
+          btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playKingsIndian)
           profileInfoEl.append(btn);
         } else if (openingName.indexOf("Queens") > -1) {
           var btn = document.createElement("button")
           btn.textContent = "Queen's Gambit";
+          btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playQueensGambit)
           profileInfoEl.append(btn);
         } else if (openingName.indexOf("Ruy") > -1) {
           var btn = document.createElement("button")
           btn.textContent = "Ruy Lopez";
+          btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playRuyLopez)
           profileInfoEl.append(btn);
         } else if (openingName.indexOf("Dutch") > -1) {
           var btn = document.createElement("button")
           btn.textContent = "Dutch";
+          btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playDutch)
           profileInfoEl.append(btn);
         }  else if (openingName.indexOf("Pirc") > -1) {
           var btn = document.createElement("button")
           btn.textContent = "Pirc Defense";
+          btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playPirc)
           profileInfoEl.append(btn);
         } else {
           var currentEl = document.createElement("h3")
-          currentEl.textContent = 'More Openings Coming Soon'
+          currentEl.textContent = 'Coming Soon';
+          currentEl.setAttribute('class', 'button opening-button')
           profileInfoEl.append(currentEl);
         };
     }); 
@@ -105,46 +149,55 @@ fetch(requestElo).then(function(response) {
       if (openingName.indexOf('Caro') > -1) {
         var btn = document.createElement('button');
         btn.innerHTML = "Caro-Kann";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playCaroKann)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Modern") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Modern Defense";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playModern)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Scotch") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Scotch";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playScotch)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Indian") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Kings Indian";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playKingsIndian)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Queens") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Queen's Gambit";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playQueensGambit)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Ruy") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Ruy Lopez";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playRuyLopez)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Dutch") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Dutch";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playDutch)
         profileInfoEl.append(btn);
       }  else if (openingName.indexOf("Pirc") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Pirc Defense";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playPirc)
         profileInfoEl.append(btn);
       } else {
         var currentEl = document.createElement("h3")
-        currentEl.textContent = 'More Openings Coming Soon'
+        currentEl.textContent = 'Coming Soon';
+        currentEl.setAttribute('class', 'button opening-button')
         profileInfoEl.append(currentEl);
       };
   }); 
@@ -166,46 +219,55 @@ fetch(requestElo).then(function(response) {
       if (openingName.indexOf('Caro') > -1) {
         var btn = document.createElement('button');
         btn.innerHTML = "Caro-Kann";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playCaroKann)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Modern") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Modern Defense";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playModern)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Scotch") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Scotch";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playScotch)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Indian") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Kings Indian";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playKingsIndian)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Queens") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Queen's Gambit";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playQueensGambit)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Ruy") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Ruy Lopez";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playRuyLopez)
         profileInfoEl.append(btn);
       } else if (openingName.indexOf("Dutch") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Dutch";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playDutch)
         profileInfoEl.append(btn);
       }  else if (openingName.indexOf("Pirc") > -1) {
         var btn = document.createElement("button")
         btn.textContent = "Pirc Defense";
+        btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playPirc)
         profileInfoEl.append(btn);
       } else {
         var currentEl = document.createElement("h3")
-        currentEl.textContent = 'More Openings Coming Soon'
+        currentEl.textContent = 'Coming Soon';
+        currentEl.setAttribute('class', 'button opening-button')
         profileInfoEl.append(currentEl);
       };
   }); 
@@ -222,12 +284,14 @@ fetch(requestElo).then(function(response) {
         var currentIconEl = document.createElement("img")
         //currentIconEl.setAttribute("id", "firouzja2003")
         currentIconEl.src = data.avatar
-        profileInfoEl.append(currentIconEl)
+        currentIconEl.setAttribute("class", "player-picture")
+        profilePictureEl.append(currentIconEl)
 
         //Displays Username
         var currentEl = document.createElement("h2")
         currentEl.textContent = data.name
-        profileInfoEl.append(currentEl);
+        currentEl.setAttribute("class", "player-bio-name")
+        playerNameEl.append(currentEl);
     }); 
   });
 
@@ -240,17 +304,20 @@ fetch(requestElo).then(function(response) {
         //Displays Rapid Chess Rating
         var currentEl = document.createElement("p")
         currentEl.textContent = 'Rapid Chess Rating: ' + data.chess_rapid.last.rating
-        profileInfoEl.append(currentEl);
+        currentEl.setAttribute("class", "player-bio")
+        playerRatingEl.append(currentEl);
 
         //Displays Bullet Chess Rating
         var currentEl = document.createElement("p")
         currentEl.textContent = 'Bullet Chess Rating: ' + data.chess_bullet.last.rating
-        profileInfoEl.append(currentEl);
+        currentEl.setAttribute("class", "player-bio")
+        playerRatingEl.append(currentEl);
 
         //Displays Blitz Chess Rating
         var currentEl = document.createElement("p")
         currentEl.textContent = 'Blitz Chess Rating: ' + data.chess_blitz.last.rating
-        profileInfoEl.append(currentEl); 
+        currentEl.setAttribute("class", "player-bio")
+        playerRatingEl.append(currentEl);
     });    
   });
 };
@@ -298,6 +365,8 @@ var playScotch = function (APIconfigFiller, newPos) {
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'r1bqk1nr/pppp1ppp/2n5/2b5/3NP3/8/PPP2PPP/RNBQKB1R') {
+
+    localStorage.setItem("highScore", userScore++);
     
     alert("GREAT WORK YOU DID IT!")
 
@@ -343,7 +412,8 @@ var playQueensGambit = function (APIconfigFiller, newPos) {
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R') {
-    
+
+    localStorage.setItem("highScore", userScore++);
     alert("GREAT WORK YOU DID IT!")
 
   } //else alert('wrong')
@@ -380,6 +450,8 @@ var playCaroKann = function (APIconfigFiller, newPos) {
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pp2pppp/8/3p4/3P4/8/PPP2PPP/RNBQKBNR') {
+
+    localStorage.setItem("highScore", userScore++);
     alert("GREAT WORK YOU DID IT!")
 
   } 
@@ -415,6 +487,8 @@ var playModern = function (APIconfigFiller, newPos) {
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N5/PPP2PPP/R1BQKBNR') {
+
+    localStorage.setItem("highScore", userScore++);
     alert("GREAT WORK YOU DID IT!")
 
   } 
@@ -462,6 +536,8 @@ var playKingsIndian = function (APIconfigFiller, newPos) {
 
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR') {
+
+    localStorage.setItem("highScore", userScore++);
     alert("GREAT WORK YOU DID IT!")
   };
 };
@@ -497,6 +573,8 @@ var playRuyLopez = function (APIconfigFiller, newPos) {
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R') {
+
+    localStorage.setItem("highScore", userScore++);
     alert("GREAT WORK YOU DID IT!")
 
   } 
@@ -543,7 +621,8 @@ var playDutch = function (APIconfigFiller, newPos) {
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqk2r/ppppp1bp/5np1/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR') {
-    
+
+    localStorage.setItem("highScore", userScore++);
     alert("GREAT WORK YOU DID IT!")
 
   } //else alert('wrong')
@@ -589,8 +668,23 @@ var playPirc = function (APIconfigFiller, newPos) {
     Chessboard('myBoard', config)
 
   } else if (Chessboard.objToFen(newPos) == 'rnbqkb1r/ppp1pp1p/3p1np1/8/3PPP2/2N5/PPP3PP/R1BQKBNR') {
-    
+
+    localStorage.setItem("highScore", userScore++);
     alert("GREAT WORK YOU DID IT!")
 
   } //else alert('wrong')
 };
+
+
+
+
+
+
+///////////////////////////////HIGHSCORING////////////////////////////////////
+
+var getScore = JSON.parse(localStorage.getItem('highScore')); 
+
+var showHighScore = document.createElement("h1");             
+showHighScore.innerHTML = getScore                            
+
+profileInfoEl.append(showHighScore)                           
