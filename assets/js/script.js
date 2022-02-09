@@ -688,3 +688,4 @@ var showHighScore = document.createElement("h1");
 showHighScore.innerHTML = getScore                            
 
 profileInfoEl.append(showHighScore)                           
+
