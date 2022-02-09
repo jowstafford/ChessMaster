@@ -60,9 +60,13 @@
                 <article>
                     <div class="my-board" id="myBoard" style="width: 45%"></div>
                 </article>
-                <div class="hint-button">
-                    <button class="button">Hint</button>
-                </div>
+                <button class="button reveal-link" data-open="reveal-modal">HINT</button>
+                    <div id="reveal-modal" class="reveal" data-reveal  role="dialog">
+                        <h2 id="modalTitle">Awesome. I have it.</h2>
+                        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                    </div>
+
+                    
         </section>
         <!-- Chessboard section ends -->
     </section>
@@ -78,13 +82,13 @@
     <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
         integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
         crossorigin="anonymous"></script>
-
     <script src="chess.js"></script>
-
-    <script src="assets/js/script.js"></script>
     <script src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/foundation.js"></script>
-    <script src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/jquery.js"></script>
-    <srcipt src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/what-input.js"></srcipt>
+    <script src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/what-input.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        $(document).foundation();
+      </script>
 </body>
 
 </html>
