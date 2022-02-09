@@ -77,13 +77,13 @@ var displayPlayerInfo = function(selectedPlayer) {
         headText.setAttribute("class", "opening-header")
         profileInfoEl.append(headText);
 
-        //Render Hint button
-        if (!hintButton) {
-          var hintButton = document.createElement('button');
-          hintButton.innerHTML = "HINT";
-          hintButton.setAttribute("class", "button hint-button")
-          hintButtonEl.replaceWith(hintButton);
-        } else {return}
+        // //Render Hint button
+        // if (!hintButton) {
+        //   var hintButton = document.createElement('button');
+        //   hintButton.innerHTML = "HINT";
+        //   hintButton.setAttribute("class", "button hint-button")
+        //   hintButtonEl.replaceWith(hintButton);
+        // } else {return}
 
 
 
