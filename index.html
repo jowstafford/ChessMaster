@@ -14,19 +14,22 @@
 
 <body>
     <!-- header section starts-->
-    <header class="header">
+    <header class="header text-center">
+        <h1>
             <a href="/" id="CHESS-MASTER">CHESS MASTER</a>
+      </h1>
         <!-- search bar and submit button section starts-->
-        <section class="search">
-            <input type="text" placeholder="Search" id="search-bar"/>
-        </section>
+        <form class="grid-x" id="search-bar">
+            <input class="search-button cell small-8" type="text" placeholder="Search" id="search-input"/>
+            <button class="search-button button cell small-3" type="submit" id="search-button">Submit</button>
+        </form>
         <!-- search bar and submit button section ends-->
     </header>
     <!-- header section ends-->
     <section class="no_header_or_footer">
 
         <!-- Profile pictures section Starts-->
-        <section id="profile-scroll">
+        <section id="profile-scroll" class="profile-scroll">
             <div class="profile-pictures">
                 <div id="top-players">
                     <img src="./assets/placeholder-images/magnus.jpeg" alt="pic" id="magnuscarlsen">
@@ -40,35 +43,42 @@
         </section>
         <!-- Profile pictures section ends-->
 
-        <!-- Profile pop up starts here-->
-        <section id="profile-info">
-            <div class="info-container">
-
-            </div>
+       <!-- Profile pop up starts here-->
+        <section class="text-center" id="profile-info">
+            <div id="head-text"></div>
         </section>
+
+
+        <div class="grid-x">
+            <div class="cell small-6" id="profile-picture"></div>
+                <div class="cell small-6">
+                <div id="player-name"></div>
+                <div id="player-rating"></div>
+                </div>
+        </div>
         <!-- Profile pop up ends-->
 
         <!-- Chessboard section starts -->
         <section id="chessboard">
             <div>
-                <h1 id="Opening_1">Opening 1</h1>
+                <h1 id="opening-title"></h1>
             </div>
-            <div>
-                <h6 id="placeholder">placeholder</h6>
-            </div>
+            
             <div class="chessboard-img">
                 <article>
-                    <div class="my-board" id="myBoard" style="width: 45%"></div>
+                    <div class="my-board" id="myBoard"></div>
                 </article>
+             </div>
                 <button class="button reveal-link" data-open="reveal-modal">HINT</button>
                     <div id="reveal-modal" class="reveal" data-reveal  role="dialog">
                         <h2 id="modalTitle">Awesome. I have it.</h2>
                         <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                     </div>
-
-                    
         </section>
         <!-- Chessboard section ends -->
+        <!-- Hint Section -->
+        <div id="hint-button"></div>
+        
     </section>
     <!-- Footer starts -->
     <footer class="footer">
