@@ -8,6 +8,7 @@ var playerNameEl = document.querySelector("#player-name")
 var playerRatingEl = document.querySelector("#player-rating")
 var openingTitleEl = document.querySelector("#opening-title")
 var chessboardEL = document.querySelector("#chessboard")
+var hintButtonEl = document.querySelector("#hint-button")
 var userArr = ['firouzja2003', 'hikaru', 'danielnaroditsky', 'magnuscarlsen', 'anishgiri', 'gothamchess']
 var APIUrl = ("https://api.chess.com/pub/player/");
 
@@ -73,6 +74,15 @@ var displayPlayerInfo = function(selectedPlayer) {
         headText.innerHTML = "Players Most Used Openings";
         headText.setAttribute("class", "opening-header")
         profileInfoEl.append(headText);
+
+        //Render Hint button
+        if (!hintButton) {
+          var hintButton = document.createElement('button');
+          hintButton.innerHTML = "HINT";
+          hintButton.setAttribute("class", "button hint-button")
+          hintButtonEl.replaceWith(hintButton);
+        } else {return}
+
 
 
         //searches text for opening names and then renders them on screen
