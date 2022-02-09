@@ -52,6 +52,25 @@ body {
     text-decoration-color: #333; */
 }
 
+
+.profile-scroll {
+    animation: last-name-load 1.25s cubic-bezier(0.63,-0.05, 0.54, 1.38);
+    transform: translateX(100%);
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes last-name-load {
+    0% {
+        transform: translatex(110%);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+  
+  
+
 .button {
     background-color: #1E776D;
 }
