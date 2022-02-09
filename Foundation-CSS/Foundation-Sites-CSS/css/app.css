@@ -8,30 +8,51 @@
     margin: auto;
     /* background-color: #333; */
 }
+#profile-info {
+    border: 5px solid red;
+}
+#profile-info img {
+    border: 5px solid blue;
+}
+#profile-info p {
+    border: 5px solid green;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 1em;
+}
+#profile-info h2 {
+    border: 5px solid purple;
+}
+#profile-info button {
+    border: 5px solid brown;
+}
 .header {
     /* border: 10px solid black;
     background-color: black; */
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
+    flex: auto;
+    display: flex;
 }
 #CHESS-MASTER {
     /* border: 5px solid Black; */
     border-radius: 8px;
-    top: 20px;
+    height: auto;
+    width: auto;
+    margin: auto 0px auto 0px;
+    padding: 10px;
     /* background-color:#333;
     color:#777; */
     /* text-decoration: underline;
     text-decoration-color: #333; */
 }
-#search {
-    position: absolute;
-    left: 420px;
-    top: 14px;
-    width: auto;
-    height: auto;
+.search {
+    margin: 10px auto 10px 10px;
 }
 #search-bar {
-    width: 300%;
+    width: auto;
+    height: auto;
 }
 #profile-scroll {
     /* background-color: black; */
@@ -57,35 +78,33 @@
 } */
 #magnuscarlsen {
     border-radius: 8px;
-    /* width: 50%;
-    height: 50%; */
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #hikaru {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #danielnaroditsky {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #anishgiri {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #gothamchess {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #firouzja2003 {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #chessboard-img {
     border-radius: 8px;
@@ -116,10 +135,243 @@
     position: absolute;
 
 } */
-/* @media screen and (max-width: 980px) {
+
+/* large laptop */
+@media screen and (max-width: 1440px) {
+    #CHESS-MASTER {
+        font-size: 240%;
+    }
+    #magnuscarlsen {
+        width: 17%;
+        height: 17%;
+    }
+    #hikaru {
+        width: 17%;
+        height: 17%;
+    }
+    #danielnaroditsky {
+        width: 17%;
+        height: 17%;
+    }
+    #anishgiri {
+        width: 17%;
+        height: 17%;
+    }
+    #gothamchess {
+        width: 17%;
+        height: 17%;
+    }
+    #firouzja2003 {
+        width: 17%;
+        height: 17%;
+    }
+    #chessboard-img {
+        width: 600px;
+        height: 600px;
+    }
+}
+/* laptop */
+@media screen and (max-width: 1024px) {
+    #CHESS-MASTER {
+        font-size: 200%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
     #chessboard-img {
         border-radius: 8px;
-        width: 500px;
-        height: 500px;
+        width: 600px;
+        height: 600px;
     }
-} */
+}
+/* tablet */
+@media screen and (max-width: 768px) {
+    #CHESS-MASTER {
+        font-size: 200%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #chessboard-img {
+        border-radius: 8px;
+        width: 600px;
+        height: 600px;
+    }
+}
+/* large mobile */
+@media screen and (max-width: 425px) {
+    #CHESS-MASTER {
+        font-size: 200%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #chessboard-img {
+        border-radius: 8px;
+        width: 600px;
+        height: 600px;
+    }
+}
+/* medium mobile */
+@media screen and (max-width: 375px) {
+    #CHESS-MASTER {
+        font-size: 200%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #chessboard-img {
+        border-radius: 8px;
+        width: 600px;
+        height: 600px;
+    }
+}
+/* small mobile */
+@media screen and (max-width: 320px) {
+    #CHESS-MASTER {
+        font-size: 200%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #chessboard-img {
+        border-radius: 8px;
+        width: 600px;
+        height: 600px;
+    }
+}
