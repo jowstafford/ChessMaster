@@ -3,35 +3,112 @@
     margin: auto;
     /* font-family: Arial, Helvetica, sans-serif; */
 }
+
+body {
+    color: grey;
+    background-color: rgb(32, 31, 31);
+}
+
 .no_header_or_footer {
     padding: 20px;
     margin: auto;
     /* background-color: #333; */
 }
+/* #profile-info {
+    border: 5px solid red;
+}
+#profile-info img {
+    border: 5px solid blue;
+}
+#profile-info p {
+    border: 5px solid green;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 1em;
+}
+#profile-info h2 {
+    border: 5px solid purple;
+}
+#profile-info button {
+    border: 5px solid brown;
+} */
 .header {
     /* border: 10px solid black;
     background-color: black; */
     margin: 0px;
-    padding: 0px;
+    padding: 10px 0 0 0;
 }
 #CHESS-MASTER {
     /* border: 5px solid Black; */
     border-radius: 8px;
-    top: 20px;
+    /* height: auto;
+    width: auto;
+    margin: auto 0px auto 0px;
+    padding: 10px; */
     /* background-color:#333;
     color:#777; */
     /* text-decoration: underline;
     text-decoration-color: #333; */
 }
-#search {
-    position: absolute;
-    left: 420px;
-    top: 14px;
-    width: auto;
-    height: auto;
+
+.button {
+    background-color: #1E776D;
+}
+
+a{
+    color: #1E776D;
+}
+.search-button {
+    border-radius: 12px;
+    margin: 5px
+}
+
+.opening-header {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.opening-button {
+    margin: 6px 1px 10px 1px;
+    padding: 1px;
+    border-radius: 3px;
+}
+
+.player-bio-name {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 0;
+    font-size: 22px;
+}
+
+.player-bio {
+    margin: 0 0 0 0;
+    padding: 8px 0 0 0;
+    font-size: 13px;
+}
+
+.player-picture {
+    margin: 15px 0 0 0;
+    padding: 0 5px 0 5px;
+}
+
+.my-board {
+    margin: 0;
+    padding: 0;
+}
+
+.hint-button {
+    margin: 10px 0 0 85%;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.search {
+    margin: 10px auto 10px 10px;
 }
 #search-bar {
-    width: 300%;
+    width: auto;
+    height: auto;
 }
 #profile-scroll {
     /* background-color: black; */
@@ -57,35 +134,33 @@
 } */
 #magnuscarlsen {
     border-radius: 8px;
-    /* width: 50%;
-    height: 50%; */
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #hikaru {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #danielnaroditsky {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #anishgiri {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #gothamchess {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #firouzja2003 {
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 17%;
+    height: 17%;
 }
 #chessboard-img {
     border-radius: 8px;
@@ -116,10 +191,243 @@
     position: absolute;
 
 } */
-/* @media screen and (max-width: 980px) {
+
+/* large laptop */
+@media screen and (max-width: 1440px) {
+    #CHESS-MASTER {
+        font-size: 240%;
+    }
+    #magnuscarlsen {
+        width: 17%;
+        height: 17%;
+    }
+    #hikaru {
+        width: 17%;
+        height: 17%;
+    }
+    #danielnaroditsky {
+        width: 17%;
+        height: 17%;
+    }
+    #anishgiri {
+        width: 17%;
+        height: 17%;
+    }
+    #gothamchess {
+        width: 17%;
+        height: 17%;
+    }
+    #firouzja2003 {
+        width: 17%;
+        height: 17%;
+    }
+    #chessboard-img {
+        width: 600px;
+        height: 600px;
+    }
+}
+/* laptop */
+@media screen and (max-width: 1024px) {
+    #CHESS-MASTER {
+        font-size: 150%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 17%;
+        height: 17%;
+    }
     #chessboard-img {
         border-radius: 8px;
-        width: 500px;
-        height: 500px;
+        width: 600px;
+        height: 600px;
     }
-} */
+}
+/* tablet */
+@media screen and (max-width: 768px) {
+    #CHESS-MASTER {
+        font-size: 150%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #chessboard-img {
+        border-radius: 8px;
+        width: 600px;
+        height: 600px;
+    }
+}
+/* large mobile */
+@media screen and (max-width: 425px) {
+    #CHESS-MASTER {
+        font-size: 150%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #chessboard-img {
+        border-radius: 8px;
+        width: 600px;
+        height: 600px;
+    }
+}
+/* medium mobile */
+@media screen and (max-width: 375px) {
+    #CHESS-MASTER {
+        font-size: 150%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #chessboard-img {
+        border-radius: 8px;
+        width: 600px;
+        height: 600px;
+    }
+}
+/* small mobile */
+@media screen and (max-width: 320px) {
+    #CHESS-MASTER {
+        font-size: 150%;
+    }
+    #magnuscarlsen {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #hikaru {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #danielnaroditsky {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #anishgiri {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #gothamchess {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #firouzja2003 {
+        border-radius: 8px;
+        width: 40%;
+        height: 40%;
+    }
+    #chessboard-img {
+        border-radius: 8px;
+        width: 600px;
+        height: 600px;
+    }
+}
