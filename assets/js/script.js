@@ -131,7 +131,7 @@ var displayPlayerInfo = function(selectedPlayer) {
           profileInfoEl.append(btn);
         }  else if (openingName.indexOf("Pirc") > -1) {
           var btn = document.createElement("button")
-          btn.textContent = "Pirc Defense";
+          btn.textContent = "Pirc";
           btn.setAttribute("class", "button opening-button")
           btn.addEventListener('click', playPirc)
           profileInfoEl.append(btn);
@@ -201,7 +201,7 @@ fetch(requestElo).then(function(response) {
         profileInfoEl.append(btn);
       }  else if (openingName.indexOf("Pirc") > -1) {
         var btn = document.createElement("button")
-        btn.textContent = "Pirc Defense";
+        btn.textContent = "Pirc";
         btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playPirc)
         profileInfoEl.append(btn);
@@ -271,7 +271,7 @@ fetch(requestElo).then(function(response) {
         profileInfoEl.append(btn);
       }  else if (openingName.indexOf("Pirc") > -1) {
         var btn = document.createElement("button")
-        btn.textContent = "Pirc Defense";
+        btn.textContent = "Pirc";
         btn.setAttribute("class", "button opening-button")
         btn.addEventListener('click', playPirc)
         profileInfoEl.append(btn);
