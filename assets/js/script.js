@@ -8,13 +8,8 @@ var playerNameEl = document.querySelector("#player-name")
 var playerRatingEl = document.querySelector("#player-rating")
 var openingTitleEl = document.querySelector("#opening-title")
 var chessboardEL = document.querySelector("#chessboard")
-var hintButtonEl = document.querySelector("#hint-button")
 var userArr = ['firouzja2003', 'hikaru', 'danielnaroditsky', 'magnuscarlsen', 'anishgiri', 'gothamchess']
 var APIUrl = ("https://api.chess.com/pub/player/");
-
-
-
-let userScore = 1
 
 
 
@@ -39,6 +34,10 @@ var searchInputEl = document.querySelector("#search-input");
 var searchFunction = function(selectedPlayer) {
   event.preventDefault();
   profileInfoEl.textContent = "";
+  headTextEl.textContent = "";
+  profilePictureEl.textContent = "";
+  playerNameEl.textContent = "";
+  playerRatingEl.textContent = "";
   var selectedPlayer = searchInputEl.value.trim()
   displayPlayerInfo(selectedPlayer)
 
@@ -907,11 +906,13 @@ var playPirc = function (APIconfigFiller, newPos) {
 
 
 ///////////////////////////////HIGHSCORING////////////////////////////////////
+var highScoreEl = document.querySelector("#high-score")
+let userScore = 1
 
-var getScore = JSON.parse(localStorage.getItem('highScore')); 
+var getScore = JSON.parse(localStorage.getItem('highScore')) || ''; 
 
-var showHighScore = document.createElement("h1");             
-showHighScore.innerHTML = getScore                            
+            
+highScoreEl.innerHTML = 'PREVIOUS RECORD: ' + getScore                          
 
 profileInfoEl.append(showHighScore)                           
 
