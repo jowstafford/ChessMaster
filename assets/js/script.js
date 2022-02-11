@@ -914,5 +914,5 @@ var getScore = JSON.parse(localStorage.getItem('highScore')) || '';
             
 highScoreEl.innerHTML = 'PREVIOUS RECORD: ' + getScore                          
 
-profileInfoEl.append(showHighScore)                           
+                         
 
