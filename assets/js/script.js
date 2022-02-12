@@ -411,8 +411,17 @@ var playScotch = function (APIconfigFiller, newPos) {
   } else if (Chessboard.objToFen(newPos) == 'r1bqk1nr/pppp1ppp/2n5/2b5/3NP3/8/PPP2PPP/RNBQKB1R') {
 
     localStorage.setItem("highScore", userScore++);
+
+    function displayWinScreen(){
+      var winScreenText = {
+        dataType: "Great WORK YOU DID IT",
+      }
+      document.getElementById('winner-modal').textContent = winScreenText.dataType
+      $('#Reveal-Modal').foundation('open');
+    }
+    displayWinScreen();
     
-    alert("GREAT WORK YOU DID IT!")
+    //alert("GREAT WORK YOU DID IT!")
 
   } //else alert('wrong')
 };
@@ -491,7 +500,15 @@ var playQueensGambit = function (APIconfigFiller, newPos) {
   } else if (Chessboard.objToFen(newPos) == 'rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R') {
 
     localStorage.setItem("highScore", userScore++);
-    alert("GREAT WORK YOU DID IT!")
+    
+    function displayWinScreen(){
+      var winScreenText = {
+        dataType: "Great WORK YOU DID IT",
+      }
+      document.getElementById('winner-modal').textContent = winScreenText.dataType
+      $('#Reveal-Modal').foundation('open');
+    }
+    displayWinScreen();
 
   } //else alert('wrong')
 };
@@ -554,13 +571,21 @@ var playCaroKann = function (APIconfigFiller, newPos) {
   } else if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pp2pppp/8/3p4/3P4/8/PPP2PPP/RNBQKBNR') {
 
     localStorage.setItem("highScore", userScore++);
-    alert("GREAT WORK YOU DID IT!")
+  
+    function displayWinScreen(){
+      var winScreenText = {
+        dataType: "Great WORK YOU DID IT",
+      }
+      document.getElementById('winner-modal').textContent = winScreenText.dataType
+      $('#Reveal-Modal').foundation('open');
+    }
+    displayWinScreen();
 
   } 
 };
 
 var playModern = function (APIconfigFiller, newPos) {
-  let modernHints = ["Pawn D2 to D4", "Pawn C2 to C4", "Knight B1 to C3", "Knight G1 to F3"]
+  let modernHints = ["Pawn G7 to G6", "Bishop F8 to G7", "Pawn C7 to C5"]
 
   var config = {
     orientation: 'black',
@@ -569,6 +594,14 @@ var playModern = function (APIconfigFiller, newPos) {
     onChange: playModern
   }
   board = Chessboard('myBoard', config)
+
+  function displayHints() {
+    var hintText = {
+      dataType: modernHints[0]
+    }
+    document.getElementById('modalTitle').textContent = hintText.dataType
+  }
+  displayHints()
   
   if (Chessboard.objToFen(newPos) == 'rnbqkbnr/pppppp1p/6p1/8/4P3/8/PPPP1PPP/RNBQKBNR') {
     
@@ -579,7 +612,15 @@ var playModern = function (APIconfigFiller, newPos) {
       onChange: playModern
     }
     Chessboard('myBoard', config)
-    
+
+    function displayHints() {
+      var hintText = {
+        dataType: modernHints[1]
+      }
+      document.getElementById('modalTitle').textContent = hintText.dataType
+    }
+    displayHints()
+
   } else if (Chessboard.objToFen(newPos) == 'rnbqk1nr/ppppppbp/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR') {
     var config = {
       orientation: 'black',
@@ -589,10 +630,26 @@ var playModern = function (APIconfigFiller, newPos) {
     }
     Chessboard('myBoard', config)
 
+    function displayHints() {
+      var hintText = {
+        dataType: modernHints[2]
+      }
+      document.getElementById('modalTitle').textContent = hintText.dataType
+    }
+    displayHints()
+
   } else if (Chessboard.objToFen(newPos) == 'rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N5/PPP2PPP/R1BQKBNR') {
 
     localStorage.setItem("highScore", userScore++);
-    alert("GREAT WORK YOU DID IT!")
+    
+    function displayWinScreen(){
+      var winScreenText = {
+        dataType: "Great WORK YOU DID IT",
+      }
+      document.getElementById('winner-modal').textContent = winScreenText.dataType
+      $('#Reveal-Modal').foundation('open');
+    }
+    displayWinScreen();
 
   } 
 };
@@ -674,7 +731,15 @@ var playKingsIndian = function (APIconfigFiller, newPos) {
   } else if (Chessboard.objToFen(newPos) == 'rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR') {
 
     localStorage.setItem("highScore", userScore++);
-    alert("GREAT WORK YOU DID IT!")
+    
+    function displayWinScreen(){
+      var winScreenText = {
+        dataType: "Great WORK YOU DID IT",
+      }
+      document.getElementById('winner-modal').textContent = winScreenText.dataType
+      $('#Reveal-Modal').foundation('open');
+    }
+    displayWinScreen();
   };
 };
 
@@ -735,7 +800,15 @@ var playRuyLopez = function (APIconfigFiller, newPos) {
   } else if (Chessboard.objToFen(newPos) == 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R') {
 
     localStorage.setItem("highScore", userScore++);
-    alert("GREAT WORK YOU DID IT!")
+    
+    function displayWinScreen(){
+      var winScreenText = {
+        dataType: "Great WORK YOU DID IT",
+      }
+      document.getElementById('winner-modal').textContent = winScreenText.dataType
+      $('#Reveal-Modal').foundation('open');
+    }
+    displayWinScreen();
 
   } 
 };
@@ -815,7 +888,15 @@ var playDutch = function (APIconfigFiller, newPos) {
   } else if (Chessboard.objToFen(newPos) == 'rnbqk2r/ppppp1bp/5np1/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR') {
 
     localStorage.setItem("highScore", userScore++);
-    alert("GREAT WORK YOU DID IT!")
+    
+    function displayWinScreen(){
+      var winScreenText = {
+        dataType: "Great WORK YOU DID IT",
+      }
+      document.getElementById('winner-modal').textContent = winScreenText.dataType
+      $('#Reveal-Modal').foundation('open');
+    }
+    displayWinScreen();
 
   } //else alert('wrong')
 };
@@ -895,7 +976,15 @@ var playPirc = function (APIconfigFiller, newPos) {
   } else if (Chessboard.objToFen(newPos) == 'rnbqkb1r/ppp1pp1p/3p1np1/8/3PPP2/2N5/PPP3PP/R1BQKBNR') {
 
     localStorage.setItem("highScore", userScore++);
-    alert("GREAT WORK YOU DID IT!")
+    
+    function displayWinScreen(){
+      var winScreenText = {
+        dataType: "Great WORK YOU DID IT",
+      }
+      document.getElementById('winner-modal').textContent = winScreenText.dataType
+      $('#Reveal-Modal').foundation('open');
+    }
+    displayWinScreen();
 
   } //else alert('wrong')
 };
